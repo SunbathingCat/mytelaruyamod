@@ -1,0 +1,9 @@
+﻿displayName = 我的MOD
+author = TOM
+version = 1.0
+hideResources = false
+hideCode = false
+includeSource = true
+includePDB = true
+homepage = http://www.fs49.org/
+buildIgnore = *.csproj, *.sln, obj\*, bin\*, *.suo, *.user, .git\*, .vs\*, Libraries\*

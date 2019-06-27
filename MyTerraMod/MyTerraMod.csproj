@@ -1,0 +1,347 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3F2728C5-C037-4CA7-A361-E2F698903404}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <AssemblyName>ClassLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>MyTerraMod</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Xna.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libraries\Microsoft.Xna.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Game, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libraries\Microsoft.Xna.Framework.Game.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Graphics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libraries\Microsoft.Xna.Framework.Graphics.dll</HintPath>
+    </Reference>
+    <Reference Include="ReLogic, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libraries\ReLogic.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Terraria, Version=1.3.5.1, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libraries\Terraria.exe</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Buffs\dragonzs.png" />
+    <Content Include="Buffs\nogravity.png" />
+    <Content Include="Buffs\CarpetMount.png" />
+    <Content Include="Buffs\demagic.png" />
+    <Content Include="Buffs\titann.png" />
+    <Content Include="Buffs\spectrall.png" />
+    <Content Include="Buffs\dragenn.png" />
+    <Content Include="Buffs\dragonbuff.png" />
+    <Content Include="Buffs\infenitymana.png" />
+    <Content Include="Buffs\xixie.png" />
+    <Content Include="Buffs\PowerOverwhelming.png" />
+    <Content Include="Buffs\CarMount.png" />
+    <Content Include="Buffs\LingYaoBuff.png" />
+    <Content Include="Buffs\invincible.png" />
+    <Content Include="Buffs\NewCursedInferno.png" />
+    <Content Include="build.txt" />
+    <Content Include="description.txt" />
+    <Content Include="Items\accessory\timestoper.png" />
+    <Content Include="Items\Armor\dragon\dragon_breastplate.png" />
+    <Content Include="Items\Armor\dragon\dragon_breastplate_Arms.png" />
+    <Content Include="Items\Armor\dragon\dragon_breastplate_Body.png" />
+    <Content Include="Items\Armor\dragon\dragon_breastplate_FemaleBody.png" />
+    <Content Include="Items\Armor\dragon\dragon_greaves.png" />
+    <Content Include="Items\Armor\dragon\dragon_greaves_Legs.png" />
+    <Content Include="Items\Armor\dragon\dragon_mask.png" />
+    <Content Include="Items\Armor\dragon\dragon_mask_Head.png" />
+    <Content Include="Items\Armor\spectral\spectral_armor.png" />
+    <Content Include="Items\Armor\spectral\spectral_armor_Arms.png" />
+    <Content Include="Items\Armor\spectral\spectral_armor_Body.png" />
+    <Content Include="Items\Armor\spectral\spectral_armor_FemaleBody.png" />
+    <Content Include="Items\Armor\spectral\spectral_headgear.png" />
+    <Content Include="Items\Armor\spectral\spectral_headgear_Head.png" />
+    <Content Include="Items\Armor\spectral\spectral_subligar.png" />
+    <Content Include="Items\Armor\spectral\spectral_subligar_Legs.png" />
+    <Content Include="Items\Armor\titan\titan_helmet.png" />
+    <Content Include="Items\Armor\titan\titan_helmet_Head.png" />
+    <Content Include="Items\Armor\titan\titan_leggings.png" />
+    <Content Include="Items\Armor\titan\titan_leggings_Legs.png" />
+    <Content Include="Items\Armor\titan\titan_mail.png" />
+    <Content Include="Items\Armor\titan\titan_mail_Arms.png" />
+    <Content Include="Items\Armor\titan\titan_mail_Body.png" />
+    <Content Include="Items\Armor\titan\titan_mail_FemaleBody.png" />
+    <Content Include="Items\bags\StartBag.png" />
+    <Content Include="Items\bags\MountsBag.png" />
+    <Content Include="Items\bags\CombatBag.png" />
+    <Content Include="Items\bags\PetBag.png" />
+    <Content Include="Items\bags\FishYoyoConstructionBag.png" />
+    <Content Include="Items\bags\HealthmanaBag.png" />
+    <Content Include="Items\bags\MiscellaneousVanityBag.png" />
+    <Content Include="Items\bags\InformationalBag.png" />
+    <Content Include="Items\bags\MovementBag.png" />
+    <Content Include="Items\accessory\flashshoes.png" />
+    <Content Include="Items\accessory\BaoxiangZhiYinQi.png" />
+    <Content Include="Items\accessory\xieegenyuan.png" />
+    <Content Include="Items\Key\SecretKeyD.png" />
+    <Content Include="Items\Key\SecretKeyC.png" />
+    <Content Include="Items\Key\SecretKey.png" />
+    <Content Include="Items\Key\SecretKeyB.png" />
+    <Content Include="Items\Key\SecretKeyA.png" />
+    <Content Include="Items\accessory\MoJie.png" />
+    <Content Include="Items\Placeable\ADChest.png" />
+    <Content Include="Items\Placeable\DChest.png" />
+    <Content Include="Items\Placeable\CChest.png" />
+    <Content Include="Items\Placeable\BChest.png" />
+    <Content Include="Items\Placeable\AChest.png" />
+    <Content Include="Items\Placeable\Lasermach.png" />
+    <Content Include="Items\Potions\InvinciblePotion.png" />
+    <Content Include="Items\Potions\InvincibleHuFu.png" />
+    <Content Include="Items\Potions\PanTao.png" />
+    <Content Include="Items\Potions\LingYao.png" />
+    <Content Include="Items\SoulOfBlight.png" />
+    <Content Include="Items\spicalitem\gongshoujingzhun.png" />
+    <Content Include="Items\spicalitem\fashiruizhi.png" />
+    <Content Include="Items\spicalitem\jianshuzhengming.png" />
+    <Content Include="Items\SuspiciousLookingSkull.png" />
+    <Content Include="Items\accessory\taijihufu.png" />
+    <Content Include="Items\Weapons\Bullet\infenityxixiedan.png" />
+    <Content Include="Items\Weapons\Bullet\xixiedan.png" />
+    <Content Include="Items\Weapons\Bullet\infenityExplodingBullet.png" />
+    <Content Include="Items\Weapons\Bullet\infenityGoldenBullet.png" />
+    <Content Include="Items\Weapons\Bullet\infenityHighVelocityBullet.png" />
+    <Content Include="Items\Weapons\Bullet\infenityInorBullet.png" />
+    <Content Include="Items\Weapons\Bullet\infenityLuminiteBullet.png" />
+    <Content Include="Items\Weapons\Bullet\infentyNanoBullet.png" />
+    <Content Include="Items\Weapons\Bullet\infenityPartyBullet.png" />
+    <Content Include="Items\Weapons\Bullet\infenityVenomBullet.png" />
+    <Content Include="Items\Weapons\Bullet\infenityFallenStar.png" />
+    <Content Include="Items\Weapons\PosionBall.png" />
+    <Content Include="Items\Weapons\CationBall.png" />
+    <Content Include="Items\Weapons\tulong.png" />
+    <Content Include="Items\Weapons\zombiekiller.png" />
+    <Content Include="Items\Weapons\yitian.png" />
+    <Content Include="Items\Weapons\deamonsword.png" />
+    <Content Include="Items\Weapons\DuoMing.png" />
+    <Content Include="Items\Weapons\HeroSword.png" />
+    <Content Include="Items\Weapons\CloneStaff.png" />
+    <Content Include="Items\Weapons\heroshortsword.png" />
+    <Content Include="Items\Weapons\TDestroyBlade.png" />
+    <Content Include="Items\Weapons\HuoHuLu.png" />
+    <Content Include="Items\Weapons\Bullet\infenityMeteorShotbullet.png" />
+    <Content Include="Items\Weapons\DanGong.png" />
+    <Content Include="Items\Weapons\Bullet\infenityChlorophyteBullet.png" />
+    <Content Include="Items\Weapons\Bullet\infenityCrystalBullet.png" />
+    <Content Include="Items\Weapons\Bullet\infenityCursedBullet.png" />
+    <Content Include="Items\Weapons\JinGuBang.png" />
+    <Content Include="Items\Weapons\XiangMoZhang.png" />
+    <Content Include="Libraries\Microsoft.Xna.Framework.dll" />
+    <Content Include="Libraries\Microsoft.Xna.Framework.Game.dll" />
+    <Content Include="Libraries\Microsoft.Xna.Framework.Graphics.dll" />
+    <Content Include="Libraries\ReLogic.dll" />
+    <Content Include="Libraries\Terraria.exe" />
+    <Content Include="Mounts\CarKey.png" />
+    <Content Include="Mounts\MagicCarpet.png" />
+    <Content Include="Mounts\MCarpet_Front.png" />
+    <Content Include="Mounts\MCarpet_Back.png" />
+    <Content Include="Mounts\MCar_Back.png" />
+    <Content Include="Mounts\MCar_Front.png" />
+    <Content Include="NPCs\DiJing_Head.png" />
+    <Content Include="NPCs\DiJing.png" />
+    <Content Include="NPCs\DiJing_Alt_1.png" />
+    <Content Include="NPCs\Ocram\Ocram_Head_Boss.png" />
+    <Content Include="NPCs\Ocram\Ocram.png" />
+    <Content Include="NPCs\Ocram\servant_of_ocram.png" />
+    <Content Include="Projectiles\Cation.png" />
+    <Content Include="Projectiles\DanGongXL.png" />
+    <Content Include="Projectiles\arrwy.png" />
+    <Content Include="Projectiles\xixiedanproj.png" />
+    <Content Include="Projectiles\laser2.png" />
+    <Content Include="Projectiles\laser3.png" />
+    <Content Include="Projectiles\laser1.png" />
+    <Content Include="Projectiles\ElectricPosion.png" />
+    <Content Include="Projectiles\ElectricAction.png" />
+    <Content Include="Projectiles\fallstar2.png" />
+    <Content Include="Projectiles\Posion.png" />
+    <Content Include="Projectiles\ShiZiEr.png" />
+    <Content Include="Projectiles\XiangMoZhangProj.png" />
+    <Content Include="Projectiles\YinliziQ.png" />
+    <Content Include="Tiles\ADChest.png" />
+    <Content Include="Tiles\DChest.png" />
+    <Content Include="Tiles\CChest.png" />
+    <Content Include="Tiles\BChest.png" />
+    <Content Include="Tiles\AChest.png" />
+    <Content Include="Tiles\lasermachtile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Buffs\CarMount.cs" />
+    <Compile Include="Buffs\CarpetMount.cs" />
+    <Compile Include="Buffs\demagic.cs" />
+    <Compile Include="Buffs\dragenn.cs" />
+    <Compile Include="Buffs\dragonbuff.cs" />
+    <Compile Include="Buffs\dragonzs.cs" />
+    <Compile Include="Buffs\infenitymana.cs" />
+    <Compile Include="Buffs\invincible.cs" />
+    <Compile Include="Buffs\LingYaoBuff.cs" />
+    <Compile Include="Buffs\NewCursedInferno.cs" />
+    <Compile Include="Buffs\nogravity.cs" />
+    <Compile Include="Buffs\PowerOverwhelming.cs" />
+    <Compile Include="Buffs\spectrall.cs" />
+    <Compile Include="Buffs\titann.cs" />
+    <Compile Include="Buffs\xixie.cs" />
+    <Compile Include="Items\accessory\timestoper.cs" />
+    <Compile Include="Items\Armor\dragon\dragon_breastplate.cs" />
+    <Compile Include="Items\Armor\dragon\dragon_greaves.cs" />
+    <Compile Include="Items\Armor\dragon\dragon_mask.cs" />
+    <Compile Include="Items\Armor\spectral\spectral_armor.cs" />
+    <Compile Include="Items\Armor\spectral\spectral_headgear.cs" />
+    <Compile Include="Items\Armor\spectral\spectral_subligar.cs" />
+    <Compile Include="Items\Armor\titan\titan_helmet.cs" />
+    <Compile Include="Items\Armor\titan\titan_leggings.cs" />
+    <Compile Include="Items\Armor\titan\titan_mail.cs" />
+    <Compile Include="Items\bags\CombatBag.cs" />
+    <Compile Include="Items\bags\MiscellaneousVanityBag.cs" />
+    <Compile Include="Items\bags\FishYoyoConstructionBag.cs" />
+    <Compile Include="Items\bags\HealthmanaBag.cs" />
+    <Compile Include="Items\bags\InformationalBag.cs" />
+    <Compile Include="Items\bags\MountsBag.cs" />
+    <Compile Include="Items\bags\MovementBag.cs" />
+    <Compile Include="Items\bags\PetBag.cs" />
+    <Compile Include="Items\bags\StartBag.cs" />
+    <Compile Include="Items\accessory\BaoxiangZhiYinQi.cs" />
+    <Compile Include="Items\accessory\flashshoes.cs" />
+    <Compile Include="Items\Key\SecretKeyD.cs" />
+    <Compile Include="Items\Key\SecretKeyC.cs" />
+    <Compile Include="Items\Key\SecretKey.cs" />
+    <Compile Include="Items\Key\SecretKeyA.cs" />
+    <Compile Include="Items\Key\SecretKeyB.cs" />
+    <Compile Include="Items\accessory\MoJie.cs" />
+    <Compile Include="Items\Placeable\ADChest.cs" />
+    <Compile Include="Items\Placeable\DChest.cs" />
+    <Compile Include="Items\Placeable\CChest.cs" />
+    <Compile Include="Items\Placeable\AChest.cs" />
+    <Compile Include="Items\Placeable\BChest.cs" />
+    <Compile Include="Items\Placeable\Lasermach.cs" />
+    <Compile Include="Items\Potions\InvincibleHuFu.cs" />
+    <Compile Include="Items\Potions\InvinciblePotion.cs" />
+    <Compile Include="Items\Potions\LingYao.cs" />
+    <Compile Include="Items\Potions\PanTao.cs" />
+    <Compile Include="Items\BossBag.cs" />
+    <Compile Include="Items\SoulOfBlight.cs" />
+    <Compile Include="Items\spicalitem\fashiruizhi.cs" />
+    <Compile Include="Items\spicalitem\gongshoujingzhun.cs" />
+    <Compile Include="Items\spicalitem\jianshuzhengming.cs" />
+    <Compile Include="Items\SuspiciousLookingSkull.cs" />
+    <Compile Include="Items\accessory\taijihufu.cs" />
+    <Compile Include="Items\Weapons\Bullet\infenityExplodingBullet.cs" />
+    <Compile Include="Items\Weapons\Bullet\infenityFallenStar.cs" />
+    <Compile Include="Items\Weapons\Bullet\infenityGoldenBullet.cs" />
+    <Compile Include="Items\Weapons\Bullet\infenityHighVelocityBullet.cs" />
+    <Compile Include="Items\Weapons\Bullet\infenityInorBullet.cs" />
+    <Compile Include="Items\Weapons\Bullet\infenityLuminiteBullet.cs" />
+    <Compile Include="Items\Weapons\Bullet\infenityPartyBullet.cs" />
+    <Compile Include="Items\Weapons\Bullet\infenityVenomBullet.cs" />
+    <Compile Include="Items\Weapons\Bullet\infenityxixiedan.cs" />
+    <Compile Include="Items\Weapons\Bullet\infentyNanoBullet.cs" />
+    <Compile Include="Items\Weapons\Bullet\xixiedan.cs" />
+    <Compile Include="Items\Weapons\CationBall.cs" />
+    <Compile Include="Items\Weapons\CloneStaff.cs" />
+    <Compile Include="Items\Weapons\DanGong.cs" />
+    <Compile Include="Items\Weapons\deamonsword.cs" />
+    <Compile Include="Items\Weapons\DuoMing.cs" />
+    <Compile Include="Items\Weapons\heroshortsword.cs" />
+    <Compile Include="Items\Weapons\HeroSword.cs" />
+    <Compile Include="Items\Weapons\HuoHuLu.cs" />
+    <Compile Include="Items\Weapons\Bullet\infenityChlorophyteBullet.cs" />
+    <Compile Include="Items\Weapons\Bullet\infenityCrystalBullet.cs" />
+    <Compile Include="Items\Weapons\Bullet\infenityCursedBullet.cs" />
+    <Compile Include="Items\Weapons\Bullet\infenityMeteorShotbullet.cs" />
+    <Compile Include="Items\Weapons\PosionBall.cs" />
+    <Compile Include="Items\Weapons\TDestroyBlade.cs" />
+    <Compile Include="Items\Weapons\tulong.cs" />
+    <Compile Include="Items\Weapons\yitian.cs" />
+    <Compile Include="Items\Weapons\zombiekiller.cs" />
+    <Compile Include="Items\accessory\xieegenyuan.cs" />
+    <Compile Include="Mounts\CarKey.cs" />
+    <Compile Include="Mounts\MagicCarpet.cs" />
+    <Compile Include="Mounts\MCar.cs" />
+    <Compile Include="Mounts\MCarpet.cs" />
+    <Compile Include="MyGlobalNPC.cs" />
+    <Compile Include="Items\ModifyData.cs" />
+    <Compile Include="Items\Weapons\JinGuBang.cs" />
+    <Compile Include="Items\Weapons\XiangMoZhang.cs" />
+    <Compile Include="MyPlayer.cs" />
+    <Compile Include="MyTerraMod.cs" />
+    <Compile Include="MyWorld.cs" />
+    <Compile Include="NPCs\DiJing.cs" />
+    <Compile Include="NPCs\Ocram\Ocram.cs" />
+    <Compile Include="Projectiles\arrwy.cs" />
+    <Compile Include="Projectiles\Cation.cs" />
+    <Compile Include="Projectiles\DanGongXL.cs" />
+    <Compile Include="Projectiles\ElectricAction.cs" />
+    <Compile Include="Projectiles\ElectricPosion.cs" />
+    <Compile Include="Projectiles\fallstar2.cs" />
+    <Compile Include="Projectiles\laser1.cs" />
+    <Compile Include="Projectiles\laser2.cs" />
+    <Compile Include="Projectiles\laser3.cs" />
+    <Compile Include="Projectiles\Posion.cs" />
+    <Compile Include="Projectiles\ShiZiEr.cs" />
+    <Compile Include="Projectiles\XiangMoZhangProj.cs" />
+    <Compile Include="Projectiles\xixiedanproj.cs" />
+    <Compile Include="Projectiles\YinliziQ.cs" />
+    <Compile Include="Tiles\ADChest.cs" />
+    <Compile Include="Tiles\DChest.cs" />
+    <Compile Include="Tiles\CChest.cs" />
+    <Compile Include="Tiles\AChest.cs" />
+    <Compile Include="Tiles\BChest.cs" />
+    <Compile Include="Tiles\lasermachtile.cs" />
+    <Compile Include="UI\ExamplePersonUI.cs" />
+    <Compile Include="UI\VanillaItemSlotWrapper.cs" />
+    <Compile Include="Utilss\MyDustID.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".vs\MyTerraMod\v15\.suo" />
+    <None Include=".vs\MyTerraMod\v15\Server\sqlite3\db.lock" />
+    <None Include=".vs\MyTerraMod\v15\Server\sqlite3\storage.ide" />
+    <None Include=".vs\MyTerraMod\v15\Server\sqlite3\storage.ide-shm" />
+    <None Include=".vs\MyTerraMod\v15\Server\sqlite3\storage.ide-wal" />
+    <None Include=".vs\ProjectSettings.json" />
+    <None Include=".vs\slnx.sqlite" />
+    <None Include=".vs\VSWorkspaceState.json" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
+  <ProjectExtensions>
+    <VisualStudio AllowExistingFolder="true" />
+  </ProjectExtensions>
+</Project>
